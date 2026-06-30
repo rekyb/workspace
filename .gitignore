@@ -11,6 +11,10 @@
 .DS_Store
 *.swp
 
+# Permission allowlist is intentionally tracked here so it travels with the
+# clone — override any global ignore of settings.local.json for THIS repo.
+!.claude/settings.local.json
+
 # Scratch
 /scratch/
 /.superpowers/
