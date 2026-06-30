@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Read(//home/reky/.ssh/**)",
+      "Bash(command -v glab)",
+      "Bash(glab auth *)",
+      "Bash(ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 -T git@gitlab.solveeducation.org)",
+      "Bash(curl -sS -o /dev/null -w \"HTTP %{http_code}\\\\n\" --connect-timeout 8 https://gitlab.solveeducation.org/)",
+      "Bash(git ls-remote *)",
+      "mcp__plugin_se-toolkit_se-toolkit__gitlab_get_project",
+      "mcp__plugin_se-toolkit_se-toolkit__gitlab_clone_project",
+      "mcp__plugin_se-toolkit_se-toolkit__config_status",
+      "Bash(git -C backups/clones/solveed_solve-codex-config rev-parse HEAD)",
+      "Bash(python3 *)",
+      "mcp__plugin_se-toolkit_se-toolkit__gitlab_cleanup_clone",
+      "mcp__plugin_se-toolkit_se-toolkit__gitlab_publish_report",
+      "Read(//home/reky/.claude/plugins/marketplaces/se-toolkit-marketplace/.claude-plugin/**)",
+      "Read(//home/reky/.claude/plugins/cache/se-toolkit-marketplace/se-toolkit/**)",
+      "Read(//home/reky/.claude/plugins/marketplaces/se-toolkit-marketplace/**)",
+      "Bash(git -C /home/reky/.claude/plugins/marketplaces/se-toolkit-marketplace remote -v)",
+      "Bash(git -C /home/reky/.claude/plugins/marketplaces/se-toolkit-marketplace log --oneline 834090a..origin/master)",
+      "Bash(git -C /home/reky/.claude/plugins/marketplaces/se-toolkit-marketplace show origin/master:.claude-plugin/plugin.json)",
+      "Bash(git *)",
+      "Bash(claude plugin *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Skill(se-toolkit:dev-assist:ask)"
+    ]
+  }
+}
