@@ -43,6 +43,19 @@ while read -r dest url convention; do
   [ -n "${convention:-}" ] && link_convention "$abs" "$convention"
 done < <(grep -vE '^\s*#|^\s*$' "$MANIFEST")
 
+# --- Tool dependencies: run every config/tools/ensure-*.sh (sorted) ---
+tools_ok=0 tools_total=0
+for tool in "$ROOT"/config/tools/ensure-*.sh; do
+  [ -e "$tool" ] || continue          # no matches: glob stays literal, skip
+  tools_total=$((tools_total+1))
+  echo "» tool: $(basename "$tool")"
+  if bash "$tool"; then
+    tools_ok=$((tools_ok+1))
+  else
+    echo "  ⚠ tool failed: $(basename "$tool")" >&2
+  fi
+done
+
 echo "---"
-echo "cloned=$cloned skipped=$skipped failed=$failed"
+echo "cloned=$cloned skipped=$skipped failed=$failed tools=$tools_ok/$tools_total"
 [ "$failed" -eq 0 ]
