@@ -1,0 +1,14 @@
+# Workspace re-hydration manifest.
+# Format:  <dest-path>  <clone-url>  [convention]
+#   dest-path   where to clone (relative to workspace root)
+#   clone-url   git remote (HTTPS)
+#   convention  optional; a folder under config/conventions/ whose rules.md
+#               bootstrap links into the cloned repo locally
+# Lines starting with # and blank lines are ignored.
+
+brain       https://github.com/rekyb/brain.git
+archives    https://github.com/rekyb/archives.git
+
+# Add code projects below, e.g.:
+# repo/my-web-app   https://github.com/rekyb/my-web-app.git   web
+# repo/my-android   https://github.com/rekyb/my-android.git   android
