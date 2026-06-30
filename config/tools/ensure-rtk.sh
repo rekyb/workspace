@@ -11,7 +11,14 @@ if command -v rtk >/dev/null 2>&1; then
   echo "= rtk present ($(command -v rtk))"
 else
   echo "+ installing rtk via curl install script"
-  curl -fsSL "$RTK_INSTALL_URL" | sh
+  installer="$(mktemp)"
+  if ! curl -fsSL "$RTK_INSTALL_URL" -o "$installer"; then
+    rm -f "$installer"
+    echo "  ! rtk download failed (network/URL?) — see $RTK_INSTALL_URL" >&2
+    exit 1
+  fi
+  sh "$installer"
+  rm -f "$installer"
   # The install script drops the binary in ~/.local/bin.
   PATH="$HOME/.local/bin:$PATH"
   export PATH
@@ -19,6 +26,7 @@ else
     echo "  ! rtk still not on PATH after install — add ~/.local/bin to your PATH" >&2
     exit 1
   fi
+  echo "  → installed rtk to ~/.local/bin — add it to your shell PATH so future runs skip reinstall"
 fi
 
 # 2. Wire the Claude Code PreToolUse hook (global). Skip if already registered.
