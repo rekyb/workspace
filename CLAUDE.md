@@ -3,7 +3,7 @@
 This repo coordinates several independent repos; it holds **no application code**.
 
 ## What's tracked here
-Only scaffolding: `bootstrap.sh`, `manifest`, `config/`, `.claude/`, `.obsidian/`,
+Only scaffolding: `bootstrap.sh`, `manifest`, `config/`, `.claude/settings.local.json`, `.obsidian/`,
 `docs/`. Everything else (`brain/`, `archives/`, `repo/*`) is gitignored and is a
 **separate git repo** — commit changes to those inside their own repo, never here.
 
