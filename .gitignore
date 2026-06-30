@@ -1,0 +1,16 @@
+# Re-hydrated by bootstrap.sh from `manifest` — never tracked here.
+/brain/
+/archives/
+/repo/
+
+# Obsidian: keep shared config, drop noisy per-device UI state.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# OS / editor cruft
+.DS_Store
+*.swp
+
+# Scratch
+/scratch/
+/.superpowers/
