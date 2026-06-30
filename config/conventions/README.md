@@ -9,4 +9,4 @@ A repo selects a convention via the 3rd column in the workspace `manifest`.
 `bootstrap.sh` links the chosen `rules.md` into the cloned repo as
 `CLAUDE.local.md` (local + untracked).
 
-To add a type: `mkdir conventions/<type>` and write its `rules.md`.
+To add a type: `mkdir config/conventions/<type>` and write its `rules.md`.
