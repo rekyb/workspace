@@ -8,6 +8,7 @@ bootstrap needed for this folder).
 | `agents/` | All agent definitions. Global — available to every project. |
 | `commands/` | All slash commands. Global — available to every project. |
 | `mcp/` | MCP server configs. |
+| `tools/` | Idempotent tool installers (`ensure-<name>.sh`), run by `bootstrap.sh` after repo hydration. |
 | `conventions/<type>/rules.md` | Project-type rules/guidelines the AI follows (web, android, …). Rules only — no agents/commands here. |
 
 ## Conventions
