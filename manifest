@@ -12,3 +12,7 @@ archives    https://github.com/rekyb/archives.git
 # Add code projects below, e.g.:
 # repo/my-web-app   https://github.com/rekyb/my-web-app.git   web
 # repo/my-android   https://github.com/rekyb/my-android.git   android
+
+# screenshot-bot: benchmark-site screenshot crawler + TUI (local git repo; no remote yet).
+# Uncomment and set the clone URL once a remote exists:
+# repo/screenshot-bot   https://github.com/rekyb/screenshot-bot.git

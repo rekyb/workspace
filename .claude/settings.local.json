@@ -24,7 +24,9 @@
       "Bash(git *)",
       "Bash(claude plugin *)",
       "Bash(echo \"EXIT: $?\")",
-      "Skill(se-toolkit:dev-assist:ask)"
+      "Skill(se-toolkit:dev-assist:ask)",
+      "Bash(rtk ls *)",
+      "Bash(rtk read *)"
     ]
   }
 }
